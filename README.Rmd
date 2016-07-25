@@ -9,6 +9,7 @@ output:
 
 An example:
 
+
 load fonction & library:
 ```{r, echo=TRUE, message=FALSE}
 library(plotly)
@@ -21,22 +22,34 @@ data = t411_trends(time = "today")
 table(data$Type)
 ```
 
-plot it:
+tables (max 6 rows) and plots:
 
 __trend film torrents (today)__
 ```{r, echo=FALSE}
+knitr::kable(head(data[Type == "video-movie"]))
+```
+
+```{r, eval=FALSE}
 plot_ly(data[Type == "video-movie"], x = Seeders, y = Leechers, size = Complet, mode = "markers",  text = new_title)
 ```
 
 __trend film torrents (week)__
 ```{r, echo=FALSE}
 data = t411_trends(time = "week")
+knitr::kable(head(data[Type == "video-movie"]))
+```
+
+```{r, eval=FALSE}
 plot_ly(data[Type == "video-movie"], x = Seeders, y = Leechers, size = Complet, mode = "markers",  text = new_title)
 ```
 
 __trend film torrents (month)__
 ```{r, echo=FALSE}
-data = t411_trends( time = "month")
+data = t411_trends(time = "month")
+knitr::kable(head(data[Type == "video-movie"]))
+```
+
+```{r, eval=FALSE}
 plot_ly(data[Type == "video-movie"], x = Seeders, y = Leechers, size = Complet, mode = "markers",  text = new_title)
 ```
 
