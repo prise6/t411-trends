@@ -41,14 +41,14 @@ tables (max 6 rows) and plots:
 
 __trend film torrents (today)__
 
-Type          new_title                                                 Complet   Seeders   Leechers
-------------  -------------------------------------------------------  --------  --------  ---------
-video-movie   Rurouni Kenshin Kyoto Inferno                                 230       150         20
-video-movie   La Trilogie Du Dollar                                         211       140         20
-video-movie   Batman vs Superman                                            157        92         33
-video-movie   Bernard Blier,Danielle Darrieux - La Maison Bonnad             96        58          1
-video-movie   LE CAS MORRISON - MASSACRE AU TEXAS TVRip mkv                  72        42          0
-video-movie   125 Years Memory                                               71        45          3
+|Type        |new_title                                              | Complet| Seeders| Leechers|
+|:-----------|:------------------------------------------------------|-------:|-------:|--------:|
+|video-movie |Rurouni Kenshin Kyoto Inferno                          |     230|     150|       20|
+|video-movie |La Trilogie Du Dollar                                  |     211|     140|       20|
+|video-movie |Batman vs Superman                                     |     157|      92|       33|
+|video-movie |Bernard Blier,Danielle Darrieux - La Maison Bonnad     |      96|      58|        1|
+|video-movie |LE CAS MORRISON - MASSACRE AU TEXAS TVRip mkv          |      72|      42|        0|
+|video-movie |125 Years Memory                                       |      71|      45|        3|
 
 
 ```r
@@ -57,14 +57,14 @@ plot_ly(data[Type == "video-movie"], x = Seeders, y = Leechers, size = Complet, 
 
 __trend film torrents (week)__
 
-Type          new_title            Complet   Seeders   Leechers
-------------  ------------------  --------  --------  ---------
-video-movie   Batman V Superman      44210     15772        500
-video-movie   Demolition              8855      3358         63
-video-movie   Marseille               6563      2490         35
-video-movie   Eye in the Sky          3733      1362         17
-video-movie   Time Lapse              2964      1349         57
-video-movie   Miles Ahead             2719      1047         11
+|Type        |new_title         | Complet| Seeders| Leechers|
+|:-----------|:-----------------|-------:|-------:|--------:|
+|video-movie |Batman V Superman |   44210|   15772|      500|
+|video-movie |Demolition        |    8855|    3358|       63|
+|video-movie |Marseille         |    6563|    2490|       35|
+|video-movie |Eye in the Sky    |    3733|    1362|       17|
+|video-movie |Time Lapse        |    2964|    1349|       57|
+|video-movie |Miles Ahead       |    2719|    1047|       11|
 
 
 ```r
@@ -73,14 +73,14 @@ plot_ly(data[Type == "video-movie"], x = Seeders, y = Leechers, size = Complet, 
 
 __trend film torrents (month)__
 
-Type          new_title            Complet   Seeders   Leechers
-------------  ------------------  --------  --------  ---------
-video-movie   Divergente 3           49058     12565        697
-video-movie   Batman V Superman      44210     15772        500
-video-movie   Allegiant              17360      4848        134
-video-movie   Demolition              9253      3457         65
-video-movie   Belgica                 8234      2054         14
-video-movie   Dirty Grandpa           7534      2116         21
+|Type        |new_title         | Complet| Seeders| Leechers|
+|:-----------|:-----------------|-------:|-------:|--------:|
+|video-movie |Divergente 3      |   49058|   12565|      697|
+|video-movie |Batman V Superman |   44210|   15772|      500|
+|video-movie |Allegiant         |   17360|    4848|      134|
+|video-movie |Demolition        |    9253|    3457|       65|
+|video-movie |Belgica           |    8234|    2054|       14|
+|video-movie |Dirty Grandpa     |    7534|    2116|       21|
 
 
 ```r

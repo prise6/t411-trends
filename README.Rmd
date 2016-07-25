@@ -26,7 +26,7 @@ tables (max 6 rows) and plots:
 
 __trend film torrents (today)__
 ```{r, echo=FALSE}
-knitr::kable(head(data[Type == "video-movie"]))
+knitr::kable(head(data[Type == "video-movie"]), format = "markdown")
 ```
 
 ```{r, eval=FALSE}
@@ -36,7 +36,7 @@ plot_ly(data[Type == "video-movie"], x = Seeders, y = Leechers, size = Complet, 
 __trend film torrents (week)__
 ```{r, echo=FALSE}
 data = t411_trends(time = "week")
-knitr::kable(head(data[Type == "video-movie"]))
+knitr::kable(head(data[Type == "video-movie"]), format = "markdown")
 ```
 
 ```{r, eval=FALSE}
@@ -46,7 +46,7 @@ plot_ly(data[Type == "video-movie"], x = Seeders, y = Leechers, size = Complet, 
 __trend film torrents (month)__
 ```{r, echo=FALSE}
 data = t411_trends(time = "month")
-knitr::kable(head(data[Type == "video-movie"]))
+knitr::kable(head(data[Type == "video-movie"]), format = "markdown")
 ```
 
 ```{r, eval=FALSE}
