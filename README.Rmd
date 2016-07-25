@@ -1,0 +1,43 @@
+---
+title: "Script test fonctions"
+author: "François"
+date: "25 juillet 2016"
+output:
+  html_document:
+    keep_md: true
+---
+
+An example:
+
+load fonction & library:
+```{r, echo=TRUE, message=FALSE}
+library(plotly)
+source("./script_test.R")
+```
+
+Fetch data:
+```{r}
+data = t411_trends(time = "today")
+table(data$Type)
+```
+
+plot it:
+
+__trend film torrents (today)__
+```{r, echo=FALSE}
+plot_ly(data[Type == "video-movie"], x = Seeders, y = Leechers, size = Complet, mode = "markers",  text = new_title)
+```
+
+__trend film torrents (week)__
+```{r, echo=FALSE}
+data = t411_trends(time = "week")
+plot_ly(data[Type == "video-movie"], x = Seeders, y = Leechers, size = Complet, mode = "markers",  text = new_title)
+```
+
+__trend film torrents (month)__
+```{r, echo=FALSE}
+data = t411_trends( time = "month")
+plot_ly(data[Type == "video-movie"], x = Seeders, y = Leechers, size = Complet, mode = "markers",  text = new_title)
+```
+
+
